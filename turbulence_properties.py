@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Turbulence properties calculator GUI
-
-# In[10]:
-
-
 from tkinter import *
 import sys
 import math
@@ -28,6 +20,7 @@ def omegaVisc(turbKE,nu, turbVisc):
 
 
 def main():
+    empty= ''
     if v.get()==0:
         Uinf= float(velocityEntry.get())
         turbInt= float(turbIntEntry.get())
@@ -42,7 +35,7 @@ def main():
         dataw.set(omg)
         
         if (turbViscEntry.get()) or (kViscEntry.get())!= '':
-            empty= ''
+            
             entryTextVelocity.set(empty)
             entryTextTurbInt.set(empty)
             entryTextLength.set(empty)
@@ -92,7 +85,7 @@ def reset():
     
 ################
 root= Tk()
-root.geometry('520x580+500+100')
+root.geometry('520x640+500+100')
 root.resizable(False, False)
 root.title('Turbulence Properties Calculator')
 
@@ -211,4 +204,3 @@ textOutput.grid(row=0 ,column=1)
 
 
 root.mainloop()
-

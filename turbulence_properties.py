@@ -44,7 +44,13 @@ def main():
             datake.set(empty)
             datae.set(empty)
             dataw.set(empty)
+            errorVar.set('Got more input than required!')
+
+        else:
+            errorVar.set(empty)
+
             
+
     
     elif v.get()==1:
         Uinf= float(velocityEntry.get())
@@ -69,6 +75,10 @@ def main():
             datake.set(empty)
             datae.set(empty)
             dataw.set(empty)
+            errorVar.set('Got more input than required!!')
+
+        else:
+            errorVar.set(empty)
 
 def reset():
     
@@ -202,5 +212,8 @@ displayom.grid(pady= 10)
 textOutput= Label(omFrame, font= ('Courier New',12), textvariable= dataw)
 textOutput.grid(row=0 ,column=1)
 
+errorVar= StringVar()
+lblError= Label(outputFrame, textvariable= errorVar, font= ('Courier New',12), fg= '#d14732')
+lblError.grid()
 
 root.mainloop()

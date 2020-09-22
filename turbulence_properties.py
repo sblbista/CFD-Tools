@@ -2,10 +2,10 @@ from tkinter import *
 import sys
 import math
 Cmu= 0.09
+
 def turbKE(uInf, turbInt):
     return 1.5*(uInf*(turbInt/100))**2
     
-
 def epsilonLength(lengthScale, turbKE):
     return (Cmu)*(turbKE**1.5/lengthScale)
 
